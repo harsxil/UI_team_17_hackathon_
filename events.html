@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technova | Events</title>
+    <!-- Google Fonts to match the home page style -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Simple Navigation Bar to connect back to Home -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="card">
+            <h2>Upcoming Events</h2>
+            <p style="color: #94a3b8; margin-bottom: 20px;">List of tech events scheduled for this season.</p>
+            
+            <!-- Events Table -->
+            <table id="eventst">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Fee</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#TN01</td>
+                        <td>Coding Blitz</td>
+                        <td>June 05, 2026</td>
+                        <td>Free</td>
+                        <td style="color: #00f2fe; font-weight: 600;">Open</td>
+                    </tr>
+                    <tr>
+                        <td>#TN02</td>
+                        <td>event 2</td>
+                        <td>June 12, 2026</td>
+                        <td>₹200</td>
+                        <td >Closed</td>
+                    </tr>
+                    <tr>
+                        <td>#TN03</td>
+                        <td>event3</td>
+                        <td>June 19, 2026</td>
+                        <td>Free</td>
+                        <td >Closed</td>
+                    </tr>
+                    <tr>
+                        <td>#TN04</td>
+                        <td>event 4</td>
+                        <td>July 02, 2026</td>
+                        <td>₹150</td>
+                        <td >Closed</td>
+                    </tr>
+                    <tr>
+                        <td>#TN05</td>
+                        <td>event5</td>
+                        <td>July 10, 2026</td>
+                        <td>Free</td>
+                        <td >Upcoming</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        
+    <div class="container">
+        <h2>Available Events</h2>
+        <p style="margin-bottom: 20px;">Total Successful Registrations: <span id="reg-count" style="font-weight: bold; color: #e94560;">0</span></p>
+       
+    
+        <div class="events-grid">
+            <!-- (Event cards content here as in previous response) -->
+            <div class="card event-card">
+                <h4>[TN-01] Coding Blitz</h4>
+                <p><strong>Category:</strong> Programming</p>
+                <p><strong>Status:</strong> <span class="status-open">Open</span></p>
+            </div>
+            <!-- ... other cards ... -->
+        </div>
+
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Student Registration Form</h3>
+                <hr style="margin-bottom: 15px;">
+               
+                <div id="errorBox" class="error-msg"></div>
+                <div id="successBox" class="success-msg"></div>
+
+                <form id="regForm">
+                    <label for="studName">Full Name</label>
+                    <input type="text" id="studName" pattern="">
+
+                    <label for="studEmail">Email Address</label>
+                    <input type="text" id="studEmail" required>
+
+                    <label for="studMobile">Mobile Number</label>
+                    <input type="text" id="studMobile" min =10 required max = 10>
+
+                    <label for="studRegNo">Registration Number</label>
+                    <input type="text" id="studRegNo">
+ 
+                    <label for="eventSelect">Select Event</label>
+                    <select id="eventSelect">
+                        <option value="">-- Choose an Event --</option>
+                        <option value="Coding Blitz">Coding Blitz [Open]</option>
+                        <option value="AI Hackathon">AI Hackathon [Closed]</option>
+                    </select>
+
+                    <label for="partType">Participation Type</label>
+                    <select id="partType" onchange="toggleTeamFields()">
+                        <option value="Individual">Individual</option>
+                        <option value="Team">Team</option>
+                    </select>
+
+                    <div id="teamFields" style="display: none; border-left: 3px solid #0f3460; padding-left: 10px; margin-top: 10px;">
+                        <label for="teamName">Team Name</label>
+                        <input type="text" id="teamName">
+
+                        <label for="teamSize">Team Size (2 - 4)</label>
+                        <input type="number" id="teamSize">
+                    </div>
+                    
+
+                    <button  id='b' type="button" onclick="validateRegistration()">Register Now</button>
+                </form>
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p> 2026 Technova. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

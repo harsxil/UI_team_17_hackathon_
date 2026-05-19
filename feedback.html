@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Nova 2026 | Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TECH NOVA 2026</h1>
+        <p>We Value Your Feedback</p>
+    </header>
+<nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="grid-layout">
+            <div class="card">
+                <h3>Event Feedback Form</h3>
+                <hr style="margin-bottom: 15px;">
+
+                <div id="fbError" class="error-msg"></div>
+
+                <form id="feedbackForm">
+                    <label for="fbName">Your Name</label>
+                    <input type="text" id="fbName">
+
+                    <label for="fbRegNo">Registration Number</label>
+                    <input type="text" id="fbRegNo">
+
+                    <label for="fbEvent">Attended Event</label>
+                    <select id="fbEvent">
+                        <option value="">-- Choose Event --</option>
+                        <option value="Coding Blitz">Coding Blitz</option>
+                    </select>
+
+                    <label for="fbRating">Rating Score</label>
+                    <select id="fbRating">
+                        <option value="">-- Select Rating --</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+
+                    <label for="fbComments">Comments (Min 20 characters)</label>
+                    <textarea id="fbComments" rows="4"></textarea>
+
+                    <button type="button" onclick="submitFeedback()">Submit Review Form</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Live Feedback Statistics</h3>
+                <hr style="margin-bottom: 15px;">
+                <p>Total Reviews Logged: <span id="totalReviews">0</span></p>
+                <p>Average Festival Rating: <span id="avgRating">N/A</span></p>
+               
+                <div id="summaryBox" class="summary-box">
+                    <h4>Latest Input Summary:</h4>
+                    <div id="summaryContent" style="margin-top: 10px; font-size: 14px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tech Nova. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
